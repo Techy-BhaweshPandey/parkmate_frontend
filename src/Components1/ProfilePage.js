@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faEnvelope, faMapMarkerAlt, faEdit,  faLock, faCheckCircle
+  faEnvelope, faMapMarkerAlt, faEdit, faLock, faCheckCircle
 } from '@fortawesome/free-solid-svg-icons';
 import { useParams } from "react-router-dom";
 import axios from 'axios';
@@ -22,6 +22,7 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+  z-index: 1; /* ✅ Ensures content stays above background shapes */
 
   @media (max-width: 768px) {
     padding: 1rem;
@@ -100,7 +101,6 @@ const VerifiedInfo = styled(InfoItem)`
 
   @media (max-width: 768px) {
     font-size: 1.1rem;
-
     svg {
       font-size: 1.2rem;
     }
@@ -108,7 +108,6 @@ const VerifiedInfo = styled(InfoItem)`
 
   @media (max-width: 480px) {
     font-size: 1rem;
-
     svg {
       font-size: 1rem;
     }
@@ -273,7 +272,7 @@ const ProfileView = () => {
 
   return (
     <Container>
-      {/* Background shapes */}
+      {/* ✅ Background shapes with pointerEvents disabled */}
       <div style={{
         position: 'absolute',
         top: '20%',
@@ -283,6 +282,8 @@ const ProfileView = () => {
         backgroundColor: '#007BFF',
         borderRadius: '50%',
         opacity: 0.1,
+        pointerEvents: 'none',
+        zIndex: 0
       }} />
       <div style={{
         position: 'absolute',
@@ -293,6 +294,8 @@ const ProfileView = () => {
         backgroundColor: '#bbdefb',
         borderRadius: '50%',
         opacity: 0.15,
+        pointerEvents: 'none',
+        zIndex: 0
       }} />
 
       {items.length > 0 ? (
@@ -309,7 +312,6 @@ const ProfileView = () => {
                   onChange={handleInputChange}
                   ref={usernameInputRef}
                 />
-
                 <Label htmlFor="email">Email</Label>
                 <Input
                   type="email"
@@ -317,7 +319,6 @@ const ProfileView = () => {
                   value={editableData.email || ''}
                   onChange={handleInputChange}
                 />
-
                 <Label htmlFor="password">Password</Label>
                 <Input
                   type="password"
@@ -326,7 +327,6 @@ const ProfileView = () => {
                   readOnly
                   onClick={handlePasswordClick}
                 />
-
                 <Label htmlFor="uniqcode">Parking Code</Label>
                 <Input
                   type="text"
