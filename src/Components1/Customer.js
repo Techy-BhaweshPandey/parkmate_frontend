@@ -152,17 +152,18 @@ const Customer = () => {
            <Link to={`/ProfilePage/${message2}`} className="navbar-link" title="Click to view profile"> <span>Welcome, {message1}</span></Link>
             {message3 ? (
   <img
-    src={message3}
-    alt="Profile"
-    className="profile-img"
-    onError={(e) => {
-      e.target.onerror = null;
-      e.target.style.display = "none";
-      const icon = document.createElement("span");
-      icon.className = "fallback-icon";
-      e.target.parentNode.appendChild(icon);
-    }}
-  />
+  src={`https://parkmate-back-3.onrender.com${message3}`}
+  alt="Profile"
+  className="profile-img"
+  onError={(e) => {
+    e.target.onerror = null;
+    e.target.style.display = "none";
+    const icon = document.createElement("span");
+    icon.className = "fallback-icon";
+    e.target.parentNode.appendChild(icon);
+  }}
+/>
+
 ) : (
   <MdOutlineAccountCircle className="profile-img" />
 )}
