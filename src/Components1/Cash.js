@@ -42,7 +42,7 @@ const IncomeCalculator = () => {
     setTotalIncome(sum);
 
     try {
-      const response = await fetch('http://localhost:5000/save-income', {
+      const response = await fetch('https://parkmate-back-3.onrender.com/save-income', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ parkingCode: message6, incomeList, totalIncome: sum }),
@@ -93,7 +93,7 @@ const IncomeCalculator = () => {
   const fetchIncomeRecords = async () => {
     setHasFetched(true);
     try {
-      const response = await fetch(`http://localhost:5000/all-income?parkingCode=${message6}`);
+      const response = await fetch(`https://parkmate-back-3.onrender.com/all-income?parkingCode=${message6}`);
       const data = await response.json();
 
       if (response.ok) {

@@ -82,7 +82,7 @@ const Customer = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/offers")
+      .get("https://parkmate-back-3.onrender.com/api/offers")
       .then((response) => {
         setLength(response.data.length);
       })

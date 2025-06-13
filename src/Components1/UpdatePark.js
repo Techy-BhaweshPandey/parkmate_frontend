@@ -26,7 +26,7 @@ const UpdatePark = () => {
     };
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/getUser/${id}`)
+        axios.get(`https://parkmate-back-3.onrender.com/getUser/${id}`)
             .then(result => {
                 setParkingName(result.data.ParkingName);
                 setParkingArea(result.data.ParkingArea);
@@ -82,7 +82,7 @@ const UpdatePark = () => {
             }
 
             try {
-                await axios.put(`http://localhost:5000/Update/${id}`, formData, {
+                await axios.put(`https://parkmate-back-3.onrender.com/Update/${id}`, formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     },
@@ -163,7 +163,7 @@ const UpdatePark = () => {
                             <img src={URL.createObjectURL(file)} alt="Preview" className="image-preview" />
                         )}
                         {file && typeof file === "string" && (
-                            <img src={`http://localhost:5000/uploads/${file}`} alt="Preview" className="image-preview" />
+                            <img src={`https://parkmate-back-3.onrender.com/uploads/${file}`} alt="Preview" className="image-preview" />
                         )}
                     </div>
 

@@ -12,7 +12,7 @@ const AdminView = () => {
   // Fetch data
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api3/items');
+      const response = await fetch('https://parkmate-back-3.onrender.com/api3/items');
       const data = await response.json();
       setItems(data); // Store all items
     } catch (error) {

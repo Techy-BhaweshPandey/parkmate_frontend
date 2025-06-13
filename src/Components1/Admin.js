@@ -45,7 +45,7 @@ const Admin = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch('http://localhost:5000/api3/items');
+      const res = await fetch('https://parkmate-back-3.onrender.com/api3/items');
       const data = await res.json();
       setLength(data.length);
       setActiveUserData(prev => [...prev, data.length]);
@@ -55,7 +55,7 @@ const Admin = () => {
 
   useEffect(() => {
     const fetchData2 = async () => {
-      const res = await fetch('http://localhost:5000/api4/items');
+      const res = await fetch('https://parkmate-back-3.onrender.com/api4/items');
       const data = await res.json();
       setLength1(data.length);
       setTotalParkingData(prev => [...prev, data.length]);
@@ -65,7 +65,7 @@ const Admin = () => {
 
   useEffect(() => {
     const fetchData3 = async () => {
-      const res = await fetch('http://localhost:5000/ViewBooking');
+      const res = await fetch('https://parkmate-back-3.onrender.com/ViewBooking');
       const data = await res.json();
       setLength2(data.length);
       setTotalBookingData(prev => [...prev, data.length]);
@@ -75,7 +75,7 @@ const Admin = () => {
 
   useEffect(() => {
     const fetchData4 = async () => {
-      const res = await fetch('http://localhost:5000/ViewFeedback');
+      const res = await fetch('https://parkmate-back-3.onrender.com/ViewFeedback');
       const data = await res.json();
       setLength4(data.length);
       setItems(data);
@@ -215,7 +215,7 @@ export default Admin;
 //   useEffect(() => {
 //     const fetchData = async () => {
 //       try {
-//         const response = await fetch('http://localhost:5000/api3/items');
+//         const response = await fetch('https://parkmate-back-3.onrender.com/api3/items');
 //         const data = await response.json();
 //         setLength(data.length); // Update active users length
 //       } catch (error) {
@@ -228,7 +228,7 @@ export default Admin;
 //   useEffect(() => {
 //     const fetchData2 = async () => {
 //       try {
-//         const response = await fetch('http://localhost:5000/api4/items');
+//         const response = await fetch('https://parkmate-back-3.onrender.com/api4/items');
 //         const data1 = await response.json();
 //         setLength1(data1.length); // Update total parking length
 //       } catch (error) {

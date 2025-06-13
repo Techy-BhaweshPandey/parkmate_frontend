@@ -8,7 +8,7 @@ import { FaEdit } from "react-icons/fa";
 import io from 'socket.io-client';
 import Swal from 'sweetalert2';
 
-const socket = io('http://localhost:5000');
+const socket = io('https://parkmate-back-3.onrender.com');
 
 const Booking = () => {
   const location = useLocation();
@@ -36,7 +36,7 @@ const Booking = () => {
   useEffect(() => {
     const fetchBookedSlots = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api5/items?ParkingCode=${Code}`);
+        const response = await axios.get(`https://parkmate-back-3.onrender.com/api5/items?ParkingCode=${Code}`);
         const bookedSlotNumbers = response.data.map(item => item.SlotNo);
         setBookedSlots(bookedSlotNumbers);
       } catch (error) {
@@ -124,7 +124,7 @@ const Booking = () => {
 
       console.log('Sending booking data:', bookingData);  
 
-      const response = await axios.post('http://localhost:5000/api/book', bookingData);
+      const response = await axios.post('https://parkmate-back-3.onrender.com/api/book', bookingData);
       
       // Log response for debugging
       console.log('Booking Response:', response.data);

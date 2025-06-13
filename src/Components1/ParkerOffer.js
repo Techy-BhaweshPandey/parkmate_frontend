@@ -18,7 +18,7 @@ const ParkerOffer = () => {
   useEffect(() => {
     if (message6) {
       axios
-        .get(`http://localhost:5000/api/offers/${message6}`)
+        .get(`https://parkmate-back-3.onrender.com/api/offers/${message6}`)
         .then((response) => {
           setOffers(response.data);
 
@@ -47,7 +47,7 @@ const ParkerOffer = () => {
     }
 
     axios
-      .post('http://localhost:5000/api/offers', {
+      .post('https://parkmate-back-3.onrender.com/api/offers', {
         offerText: newOffer,
         parkingCode: message6,
         Parkingname: Parkingname,
@@ -75,7 +75,7 @@ const ParkerOffer = () => {
   const confirmDelete = () => {
     if (offerToDelete) {
       axios
-        .delete(`http://localhost:5000/api/offers/${offerToDelete}`)
+        .delete(`https://parkmate-back-3.onrender.com/api/offers/${offerToDelete}`)
         .then(() => {
           const updatedOffers = offers.filter((offer) => offer._id !== offerToDelete);
           setOffers(updatedOffers);

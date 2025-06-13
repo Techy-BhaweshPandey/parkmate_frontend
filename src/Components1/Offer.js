@@ -7,7 +7,7 @@ const Offer = () => {
   const [offers, setOffers] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/offers')
+    axios.get('https://parkmate-back-3.onrender.com/api/offers')
       .then((response) => setOffers(response.data))
       .catch((error) => console.error('Error fetching offers:', error));
   }, []);

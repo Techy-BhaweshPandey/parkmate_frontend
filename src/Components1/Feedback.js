@@ -43,7 +43,7 @@ console.log(currentTime);
     setError("");  // Clear any existing error message
 
     // Send data to the backend (after setting the Time)
-    fetch('http://localhost:5000/api/feed', {
+    fetch('https://parkmate-back-3.onrender.com/api/feed', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

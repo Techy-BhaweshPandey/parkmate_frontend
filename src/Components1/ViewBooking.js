@@ -22,7 +22,7 @@ const ViewBooking = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/View/${message2}`);
+        const response = await fetch(`https://parkmate-back-3.onrender.com/View/${message2}`);
         const data = await response.json();
 
         const savedPastBookings = JSON.parse(localStorage.getItem('pastBookings')) || [];
@@ -138,7 +138,7 @@ const ViewBooking = () => {
 
   const handleDeleteBooking = async () => {
     try {
-      await axios.delete(`http://localhost:5000/delete1/${itemToDelete}`);
+      await axios.delete(`https://parkmate-back-3.onrender.com/delete1/${itemToDelete}`);
       if (itemToDeleteType === 'current') {
         setCurrentBookings(prev => prev.filter(item => item._id !== itemToDelete));
       } else {

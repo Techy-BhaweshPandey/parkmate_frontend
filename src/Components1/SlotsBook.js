@@ -12,7 +12,7 @@ const SlotsBook = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/Slot/${ParkingSpaceCode}`);
+        const response = await fetch(`https://parkmate-back-3.onrender.com/Slot/${ParkingSpaceCode}`);
         const data = await response.json();
         const booked = data.map(item => item.SlotNo);
         setBookedSlots(booked);
@@ -28,7 +28,7 @@ const SlotsBook = () => {
     if (!bookedSlots.includes(slotNumber)) return;
 
     try {
-      const response = await axios.delete(`http://localhost:5000/Slot/${ParkingSpaceCode}/delete/${slotNumber}`);
+      const response = await axios.delete(`https://parkmate-back-3.onrender.com/Slot/${ParkingSpaceCode}/delete/${slotNumber}`);
       if (response.status === 200) {
         setBookedSlots(prev => prev.filter(slot => slot !== slotNumber));
         setClickedSlots(prev => [...prev, slotNumber]);

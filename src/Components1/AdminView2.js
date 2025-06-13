@@ -14,7 +14,7 @@ const [currentPage, setCurrentPage] = useState(1);
   // Fetch data
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api4/items');
+      const response = await fetch('https://parkmate-back-3.onrender.com/api4/items');
       const data = await response.json();
       setItems(data); // Store all items
     } catch (error) {
@@ -28,7 +28,7 @@ const [currentPage, setCurrentPage] = useState(1);
   };
 
   const handleDelete = (id) => {
-    axios.delete('http://localhost:5000/delete/' + id)
+    axios.delete('https://parkmate-back-3.onrender.com/delete/' + id)
       .then(res => {
         setItems(items.filter(item => item._id !== id)); // Remove item from the list
         setShowDeletePopup(false); // Close the popup

@@ -37,7 +37,7 @@ const Register = () => {
 
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api3/items');
+        const response = await fetch('https://parkmate-back-3.onrender.com/api3/items');
         const data = await response.json();
         setItems(data);
       } catch (error) {
@@ -139,7 +139,7 @@ const Register = () => {
       }
 
       try {
-        const response = await fetch("http://localhost:5000/api/data", {
+        const response = await fetch("https://parkmate-back-3.onrender.com/api/data", {
           method: "POST",
           body: formData,
         });

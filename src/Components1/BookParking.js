@@ -24,7 +24,7 @@ const BookParking = () => {
   useEffect(() => {
     const fetchParkingData = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api4/items'); // Replace with real API endpoint
+        const response = await fetch('https://parkmate-back-3.onrender.com/api4/items'); // Replace with real API endpoint
         const data = await response.json();
         setParkingSpots(data);
         setLoading(false);

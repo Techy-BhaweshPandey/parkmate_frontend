@@ -6,7 +6,7 @@ import io from "socket.io-client";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://parkmate-back-3.onrender.com");
 
 const ViewParking = () => {
   const [items, setItems] = useState([]);
@@ -20,11 +20,11 @@ const ViewParking = () => {
   useEffect(() => {
     const fetchData2 = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api2/items/${message6}`);
+        const response = await fetch(`https://parkmate-back-3.onrender.com/api2/items/${message6}`);
         const data = await response.json();
         setItems(data);
 
-        const bookingRes = await fetch("http://localhost:5000/api/bookings");
+        const bookingRes = await fetch("https://parkmate-back-3.onrender.com/api/bookings");
         const bookings = await bookingRes.json();
 
         const countMap = {};
@@ -75,7 +75,7 @@ const ViewParking = () => {
   };
 
   const handleDelete = (id) => {
-    axios.delete('http://localhost:5000/delete/' + id)
+    axios.delete('https://parkmate-back-3.onrender.com/delete/' + id)
       .then(res => {
         setItems(items.filter(item => item._id !== id));
         setShowDeletePopup(false);

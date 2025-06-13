@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faEnvelope, faMapMarkerAlt, faEdit, faTrash, faLock, faCheckCircle
+  faEnvelope, faMapMarkerAlt, faEdit,  faLock, faCheckCircle
 } from '@fortawesome/free-solid-svg-icons';
 import { useParams } from "react-router-dom";
 import axios from 'axios';
@@ -220,7 +220,7 @@ const ProfileView = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/apiprof/items/${message6}`);
+        const response = await axios.get(`https://parkmate-back-3.onrender.com/apiprof/items/${message6}`);
         setItems(response.data);
         if (response.data.length > 0) {
           setEditableData(response.data[0]);
@@ -257,7 +257,7 @@ const ProfileView = () => {
 
   const handleModifyDetails = async () => {
     try {
-      await axios.put(`http://localhost:5000/apiprof/items/${message6}`, editableData);
+      await axios.put(`https://parkmate-back-3.onrender.com/apiprof/items/${message6}`, editableData);
       toast.success("Profile updated successfully!");
       setItems([editableData]);
       setIsEditing(false);
@@ -363,9 +363,6 @@ const ProfileView = () => {
           </Button>
         ) : (
           <Button onClick={handleModifyDetails}>Modify Details</Button>
-        )}
-        {!isEditing && (
-          <Button delete><FontAwesomeIcon icon={faTrash} /> Delete Account</Button>
         )}
       </ButtonGroup>
 

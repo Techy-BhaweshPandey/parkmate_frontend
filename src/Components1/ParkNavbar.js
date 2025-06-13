@@ -26,7 +26,7 @@ const[Parkingname,setname]=useState('')
   useEffect(() => {
     if (message6) {
       axios
-        .get(`http://localhost:5000/api/offers/${message6}`)
+        .get(`https://parkmate-back-3.onrender.com/api/offers/${message6}`)
         .then((response) => setLength6(response.data.length))
         .catch((error) => console.error('Error fetching offers:', error));
     }
@@ -40,7 +40,7 @@ const[Parkingname,setname]=useState('')
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api2/items/${message6}`);
+        const response = await fetch(`https://parkmate-back-3.onrender.com/api2/items/${message6}`);
         const data = await response.json();
         setLength(data.length);
         let s = 0;

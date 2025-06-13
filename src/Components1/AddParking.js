@@ -96,7 +96,7 @@ const AddParking = () => {
     if (!validateForm()) return;
 
     try {
-      const existingResponse = await fetch("http://localhost:5000/api4/items");
+      const existingResponse = await fetch("https://parkmate-back-3.onrender.com/api4/items");
       const existingItems = await existingResponse.json();
 
       const codeExists = existingItems.some(
@@ -127,7 +127,7 @@ const AddParking = () => {
         formData.append("file", file);
       }
 
-      const response = await fetch("http://localhost:5000/api/data1", {
+      const response = await fetch("https://parkmate-back-3.onrender.com/api/data1", {
         method: "POST",
         body: formData,
       });
