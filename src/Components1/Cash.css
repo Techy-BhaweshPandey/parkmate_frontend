@@ -1,0 +1,76 @@
+@media (max-width: 900px) {
+  .chart-container {
+    width: 100% !important;
+  }
+
+  canvas {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 853px) {
+  .chart-container {
+    padding: 10px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 8px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .chart-container {
+    margin: 0 auto;
+  }
+
+  input, button {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+
+  .calculateButton,
+  .downloadButton {
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+  }
+
+  .incomeInput {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .chart-container {
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    font-size: 13px;
+  }
+
+  th, td {
+    padding: 6px !important;
+  }
+
+  .incomeInput {
+    font-size: 13px !important;
+    padding: 8px !important;
+  }
+
+  .addButton, .viewButton, .calculateButton, .downloadButton {
+    font-size: 13px !important;
+    padding: 10px 14px !important;
+  }
+
+  h1 {
+    font-size: 22px !important;
+  }
+}

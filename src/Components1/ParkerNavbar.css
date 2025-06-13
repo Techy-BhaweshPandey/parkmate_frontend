@@ -1,0 +1,346 @@
+.App {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(#0990d8, #0f8cda); /* Base gradient */
+  background-size: 300% 300%; /* For smooth animation */
+  animation: gradientShift 15s ease infinite; /* Gradient animation */
+  position: relative;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+/* Welcome Section */
+.welcome-section {
+  text-align: center;
+  margin-top: 140px; /* To avoid navbar overlap */
+  padding: 20px;
+  
+  border-radius: 15px;
+ 
+  width: 90%;
+  max-width: 500px;
+  
+  animation: fadeIn 2s ease-in-out;
+  margin-left: 440px;
+}
+
+.welcome-section h2 {
+  font-size: 2.2em;
+  color:rgb(237, 218, 10);
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.welcome-section p {
+  font-size: 1.2em;
+  color: white;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+/* Content Section */
+.content-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 20px;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.card {
+  background: whitesmoke;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.card h3{
+  color:rgb(239, 7, 61);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Subtle Overlay for Contrast */
+.App::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating Particles (Optional) */
+.App::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'); /* Texture overlay */
+  opacity: 0.1;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+.navbar1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(63, 134, 226, 0.7);
+  backdrop-filter: blur(15px);
+  padding: 15px 0;
+  z-index: 100;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar1 ul {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ensure items are vertically centered */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar1 li {
+  margin: 0 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+
+/* Hover Effect */
+.navbar1 a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar1 a:hover {
+  color: #ffcc00;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(255, 204, 0, 0.6); /* Add glow effect */
+}
+
+.navbar1 a.active {
+  color: #ffcc00;
+  background-color: rgba(255, 255, 255, 0.3); /* Highlight active link */
+}
+
+.navbar1.scrolled {
+  background: rgba(63, 134, 226, 0.85);
+}
+
+/* Adding underline animation for links */
+.navbar1 a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #ffcc00;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar1 a:hover::after {
+  width: 100%; /* Underline grows on hover */
+}
+
+.navbar1 li.profile-container {
+  display: flex;
+  align-items: center; /* Vertically center the text and image */
+  justify-content: center; /* Center the content horizontally */
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.profile1-img {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 10px; /* Space between text and image */
+}
+
+.profile1-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Ensure the image fits well within the circle */
+}
+
+@media (min-width: 1000px) {
+  .content-container {
+    flex-direction: row;
+  }
+
+  .card {
+    flex: 1 1 30%;
+  }
+}
+
+/* 800px to 999px */
+@media (min-width: 800px) and (max-width: 999px) {
+  .navbar1 ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .content-container {
+    flex-direction: row;
+  }
+
+  .card {
+    flex: 1 1 45%;
+  }
+
+  .welcome-section h2 {
+    font-size: 24px;
+  }
+}
+
+/* 768px to 799px */
+@media (min-width: 768px) and (max-width: 799px) {
+  .navbar1 ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logout-btn {
+    margin-top: 10px;
+  }
+
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    margin-top: 38px;
+    width: 85%;
+    padding: 8px;
+  }
+
+  .welcome-section h2 {
+    font-size: 22px;
+  }
+}
+
+/* 420px to 767px */
+@media (max-width: 767px) {
+  .navbar1 ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .profile-container {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .logout-btn {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .welcome-section h2 {
+    font-size: 20px;
+  }
+
+  .welcome-section p {
+    font-size: 14px;
+  }
+
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+ .card {
+    margin-top: 38px;
+    width: 85%;
+    padding: 8px;
+  }
+}
+
+/* Below 420px - smallest screen adjustments */
+@media (max-width: 420px) {
+  .navbar1 ul {
+    gap: 8px;
+  }
+
+  .navbar1 li {
+    font-size: 14px;
+  }
+
+  .logout-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .profile-img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .welcome-section h2 {
+    font-size: 18px;
+  }
+
+  .card {
+    margin-top: 38px;
+    width: 85%;
+    padding: 8px;
+  }
+}

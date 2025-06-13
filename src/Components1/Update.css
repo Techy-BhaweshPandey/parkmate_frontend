@@ -1,0 +1,190 @@
+/* Login.css */
+
+/* Container cleaned: no background, no shadow */
+
+.login6-container {
+    width: 100vw;
+    height: 100vh;
+    padding: 30px 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #f0f4ff 0%, #d9e4ff 100%);
+    border-radius: 0; /* Remove rounding for full page */
+    box-shadow: none; /* Remove shadow for full page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Form title */
+.login88-form h2 {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    color: #1f2937; /* darker gray */
+}
+
+.login88-form h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    margin: 12px auto 0;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    border-radius: 4px;
+}
+
+/* Input fields: label + input inline, spaced */
+.input-field8 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.input-field8 label {
+    flex: 0 0 150px; /* fixed width for label */
+    font-weight: 600;
+    color: #34495e;
+    white-space: nowrap;
+}
+
+.asterik {
+    color: #e53e3e; /* bright red */
+    margin-left: 4px;
+}
+
+.input-field8 input[type="text"],
+.input-field8 input[type="number"],
+.input-field8 input[type="file"],
+.input-field8 textarea {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1.5px solid #d1d5db; /* subtle gray */
+    border-radius: 8px;
+    font-size: 15px;
+    background: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+/* textarea fixed height but same flex */
+.input-field8 textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.input-field8 input:focus,
+.input-field8 textarea:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.2);
+    background: #fff;
+}
+
+/* Error text below input, aligned left but full width */
+.error-text {
+    color: #e53e3e;
+    font-size: 13px;
+    margin-top: 6px;
+    margin-left: 150px; /* align with inputs */
+}
+
+/* Submit button */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(106, 17, 203, 0.3);
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(90deg, #2575fc, #6a11cb);
+    box-shadow: 0 12px 30px rgba(38, 97, 238, 0.6);
+    transform: translateY(-3px);
+}
+
+.submit-btn:active {
+    transform: scale(0.97);
+}
+
+/* Image preview styling */
+.image-preview {
+    display: block;
+    width: 22%;
+    padding: 16px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(90deg, #0b73ea, #2575fc);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(106, 17, 203, 0.3);
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+
+}
+
+/* Tick animation */
+.tick-animation {
+    text-align: center;
+    font-size: 36px;
+    color: #16a34a; /* fresh green */
+    animation: pop 0.6s ease forwards;
+    margin-bottom: 20px;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.4);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .login6-container {
+        padding: 20px 15px;
+        height: 800px;
+    }
+
+    .login88-form h2 {
+        font-size: 24px;
+    }
+
+    .input-field8 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .input-field8 label {
+        flex: none;
+        margin-bottom: 6px;
+    }
+
+    .error-text,
+    .image-preview {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,15 @@
+.form1-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.form1-group label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

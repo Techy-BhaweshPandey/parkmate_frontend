@@ -1,0 +1,335 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.landing-page {
+  transition: all 0.3s ease;
+}
+
+/* Light Theme */
+html.light {
+  background-color: #f9f9f97c;
+  color: black;
+}
+
+html.light .navbar {
+  background-color: #5a9bd5;
+}
+
+html.light .navbar a {
+  color: white;
+}
+
+html.light .footer {
+  background-color: #5a9bd5;
+  color: white;
+}
+
+/* Dark Theme */
+html.dark {
+  background-color: #121212;
+  color: white;
+}
+
+html.dark .navbar {
+  background-color: #1a3a4b;
+}
+
+html.dark .navbar a {
+  color: white;
+}
+
+html.dark .footer {
+  background-color: #1a3a4b;
+  color: white;
+}
+
+html.dark .section1 {
+  background-color: #1c1c1c;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  background-color: #1a3a4b;
+}
+
+.navbar .logo a {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .navbar-links {
+  display: flex;
+  gap: 20px;
+
+}
+
+.navbar .navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  margin-top: 14px;
+}
+
+.navbar .theme-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Section Styling */
+.section1 {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.home {
+  background-color: white;
+}
+
+.about, .services, .login {
+  background-color: #f0f0f0;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  height:160px;
+  background-color: #6cbae4;
+}
+
+/* Login Form */
+.login-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.login-form input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.login-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #5a9bd5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #4b8ac0;
+}
+
+.popup4-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup4-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup4-btn {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup4-btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .login-form {
+    flex-direction: column;
+  }
+}
+/* Section Styling */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  margin-top: 40px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #5a9bd5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background-color: #4a8bcb;
+}
+
+/* Section Icon Styling */
+.section-icon {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 15px;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-icon svg {
+  color: #5a9bd5;
+}
+
+/* Home Section Specific */
+.home {
+  background-color: #f0f8ff;
+}
+.home h2{
+  font-size: 2.4rem;
+}
+.home p{
+  font-size: 1.2rem;
+}
+/* About Section Specific */
+.about {
+  background-color: #f4f4f9;
+}
+.about p{
+  font-size: 1.2rem;
+}
+.about-content {
+  margin-top: 30px;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+.about h2{
+  font-size: 2.2rem;
+}
+/* Services Section Styling */
+.services {
+  background-color: #e8f4f8;
+}
+.services h2{
+ font-size: 2.2rem;
+}
+.services p{
+  font-size: 1.1rem;
+}
+.service-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.service-item {
+  text-align: center;
+  max-width: 300px;
+}
+
+.service-item h3 {
+  margin-top: 15px;
+  font-size: 1.5em;
+}
+
+.service-item p {
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+/* Login Section */
+.login {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #5a9bd5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #4a8bcb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+ display: none;
+}

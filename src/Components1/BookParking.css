@@ -1,0 +1,225 @@
+/* General container styles */
+.parking-container {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e6f0ff, #ffffff);
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Header styles */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content8 {
+  color: #0056b3;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.parking {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+/* Search Bar */
+.search-bar {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 30px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #f8fbff;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.05);
+}
+
+.search6-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #007bff;
+}
+
+.search-dropdown {
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid #007bff;
+  border-top: none;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-item:hover {
+  background-color: #e6f0ff;
+}
+
+/* Parking Grid */
+.parking-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.parking-spot {
+  background-color: #ffffff;
+  border: 1px solid #cce0ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+}
+
+.parking-spot:hover {
+  transform: translateY(-5px);
+}
+
+.parking-spot img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.spot-info {
+  padding: 15px;
+  color: #003366;
+}
+
+.spot-info h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #0056b3;
+}
+
+.spot-info h3 {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Book Button */
+.book-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px;
+  margin: 15px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-left: 280px;
+}
+
+.book-btn:hover {
+  background-color: #0056b3;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  width: 100%;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  background-color: #e0ecff;
+  border: 1px solid #007bff;
+  color: #007bff;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.page-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.page-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Responsive Styles */
+
+/* Mobile (max-width: 420px) */
+@media (max-width: 420px) {
+  .spot-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .spot-info h3 {
+    font-size: 0.9rem;
+  }
+
+  .search-bar input {
+    font-size: 0.9rem;
+  }
+
+  .book-btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .parking-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .parking-spot {
+    max-width: 90%;
+  }
+}
+
+/* Medium devices (max-width: 850px) */
+@media (max-width: 850px) {
+  .search-bar {
+    max-width: 95%;
+  }
+
+  .spot-info {
+    padding: 12px;
+  }
+
+  .book-btn {
+    margin: 10px;
+  }
+}
+
+

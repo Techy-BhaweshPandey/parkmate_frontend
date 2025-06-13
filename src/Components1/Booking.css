@@ -1,0 +1,286 @@
+/* Main container */
+.slotbook {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: linear-gradient(135deg, #e0f7ff, #b3e5fc);
+  overflow-y: auto;
+  padding-top: 40px;
+}
+
+/* Form Container */
+.booking-container {
+  max-width: 420px;
+  margin: auto;
+ 
+  border-radius: 12px;
+  padding: 25px;
+  
+}
+
+/* Heading */
+.booking-form h2 {
+  color: #1e3a5f;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form fields */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cfd8dc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f1f8ff;
+}
+
+/* Icon Container */
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Dynamic Icon Button */
+.dynamic-icon-button {
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 8px;
+  background-color: #bbdefb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.dynamic-icon {
+  font-size: 26px;
+  color: #0d47a1;
+}
+
+/* Hover Effects */
+.dynamic-icon-button:hover {
+  transform: scale(1.1);
+}
+
+/* Disabled Slot */
+.dynamic-icon-button.disabled {
+  background-color: #ef5350 !important;
+  cursor: not-allowed;
+}
+
+.dynamic-icon-button.booked .dynamic-icon {
+  color: #fff;
+}
+
+/* Button */
+.save-proceed-btn {
+  width: 100%;
+  background-color: #1e88e5;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.save-proceed-btn:hover {
+  background-color: #1565c0;
+}
+
+/* Popups */
+.success-popup,
+.error-popup,
+.success1-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 999;
+  width: 80%;
+  max-width: 300px;
+}
+
+.success-popup {
+  background-color: #43a047;
+}
+
+.success1-popup {
+  background-color: #43a047;
+}
+
+.error-popup {
+  background-color: #e53935;
+}
+
+.error-popup button,
+.success-popup button,
+.success1-popup button {
+  margin-top: 10px;
+  background-color: white;
+  color: #333;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Review Booking */
+.review-booking {
+  background-color: #e3f2fd;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.review-booking h2 {
+  font-size: 24px;
+  color: #0d47a1;
+  margin-bottom: 15px;
+}
+
+.review-booking p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.review-booking button {
+  background-color: #1e88e5;
+  color: white;
+  padding: 10px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+/* ======================== Responsive Media Queries ======================== */
+/* For desktop layout */
+/* ========================
+   DESKTOP VIEW (≥ 901px)
+   ======================== */
+@media (min-width: 901px) {
+  .booking-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 40px 60px;
+    max-width: 100%;
+    gap: 40px;
+  }
+
+  .booking-form {
+    flex: 1;
+    max-width: 450px;
+   
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.1);
+  }
+
+  .icon-container {
+    position: fixed;
+    right: 40px;
+    top: 100px;
+    width: 240px;
+    height: 80vh;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 12px;
+    padding: 10px;
+   
+    border-radius: 8px;
+   
+  }
+}
+
+/* Up to 900px */
+@media (max-width: 900px) {
+  .booking-container {
+    max-width: 90%;
+  }
+}
+
+/* Up to 853px */
+@media (max-width: 853px) {
+  .dynamic-icon-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .dynamic-icon {
+    font-size: 24px;
+  }
+}
+
+/* Up to 768px */
+@media (max-width: 768px) {
+  .slotbook {
+    padding: 20px 10px;
+  }
+
+  .icon-container {
+    gap: 8px;
+  }
+
+  .booking-container {
+    padding: 20px;
+  }
+
+  .save-proceed-btn {
+    font-size: 15px;
+  }
+}
+
+/* Up to 420px */
+@media (max-width: 420px) {
+  .dynamic-icon-button {
+    width: 45px;
+    height: 45px;
+  }
+
+  .dynamic-icon {
+    font-size: 20px;
+  }
+
+  .save-proceed-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .booking-form h2,
+  .review-booking h2 {
+    font-size: 20px;
+  }
+
+  .review-booking p {
+    font-size: 14px;
+  }
+}

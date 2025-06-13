@@ -1,0 +1,153 @@
+/* Offer.css */
+
+.offer-container {
+  max-width: 1280px;
+  margin: 3rem auto;
+  padding: 2rem 1rem;
+  background: linear-gradient(145deg, #ffffff, #f4f7fb);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Fixed heading styling */
+.header {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #1a1a1a;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 0.6rem;
+}
+
+/* Fixes line overflow issue */
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+ 
+  border-radius: 2px;
+}
+
+/* Offer Grid */
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 2rem;
+}
+
+/* Offer Card */
+.offer-card {
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+  padding: 1.8rem 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  border: 1px solid #eef0f4;
+}
+
+/* Visual ribbon for "Offer" label */
+.offer-card::before {
+  content: '🔥 OFFER';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: #ff4757;
+  color: white;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* Offer content */
+.offer-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2a2a2a;
+  margin-bottom: 0.75rem;
+}
+
+.offer-card h4,
+.offer-card h5 {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Share button on right */
+.share-btn {
+  margin-top: 1.2rem;
+  margin-left: auto;
+  background: linear-gradient(90deg, #1e90ff, #00bfff);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.share-btn:hover {
+  background: linear-gradient(90deg, #0078d4, #00a6fb);
+  transform: scale(1.03);
+}
+
+.no-offers {
+  font-size: 1.15rem;
+  text-align: center;
+  color: #999;
+  padding: 2.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header {
+    font-size: 2.3rem;
+  }
+
+  .offer-text {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 2rem;
+  }
+
+  .offer-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .offer-card {
+    padding: 1.5rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 1.8rem;
+  }
+
+  .offer-text {
+    font-size: 1rem;
+  }
+
+  .share-btn {
+    font-size: 0.9rem;
+    padding: 0.55rem 1rem;
+  }
+}

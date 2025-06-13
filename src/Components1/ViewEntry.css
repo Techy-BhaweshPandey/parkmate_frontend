@@ -1,0 +1,255 @@
+/* Base Styles */
+.page-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f7ff;
+    color: #333;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .header h2 {
+    color: #0056b3;
+    font-size: 28px;
+  }
+ .delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.delete-btn:hover {
+  background-color: #d11a2a;
+}
+
+.restore-btn {
+  background-color: #4caf50;
+  color: white;
+  margin-left: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 68px;
+}
+
+.restore-btn:hover {
+  background-color: #388e3c;
+}
+
+
+  .search-bar {
+    padding: 10px 14px;
+    border-radius: 16px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 250px;
+    transition: all 0.3s ease-in-out;
+    margin-top:-14px;
+  }
+  
+  .search-bar:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Table Styles */
+  .parking-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .parking-table:hover {
+    transform: scale(1.01);
+  }
+  
+  .parking-table th,
+  .parking-table td {
+    border: 1px solid #e0e0e0;
+    padding: 14px 18px;
+    text-align: left;
+  }
+  
+  .parking-table th {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .button1-group {
+    display: flex;
+    gap: 10px;
+    
+  }
+  /* Example for styling buttons */
+
+
+
+
+.price-display {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #0d0c0c;
+  font-weight: bold;
+}
+
+  .btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+   
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s;
+  }
+  
+  .check-in {
+    background-color: #28a745;
+  }
+  
+  .check-out {
+    background-color: #dc3545;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
+  /* Media Queries */
+ /* 🔹 Max-width: 900px */
+@media (max-width: 900px) {
+  .search-bar {
+    width: 100%;
+    margin-top: 12px;
+  }
+.page-container{
+  width: 100vw;
+  height:100vh;
+}
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .parking-table th,
+  .parking-table td {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .btn {
+    padding: 8px 14px;
+    font-size: 15px;
+  }
+}
+
+/* 🔹 Max-width: 853px */
+@media (max-width: 853px) {
+  .search-bar {
+    margin-top: 10px;
+  }
+.page-container{
+  width: 100vw;
+  height:100vh;
+}
+  .parking-table th,
+  .parking-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .btn {
+    padding: 7px 12px;
+    font-size: 14px;
+  }
+}
+
+/* 🔹 Max-width: 768px */
+@media (max-width: 768px) {
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
+.page-container{
+  width: 180vw;
+  height:140vh;
+}
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .parking-table th,
+  .parking-table td {
+    font-size: 13px;
+    padding: 9px;
+  }
+
+  .btn {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+/* 🔹 Max-width: 420px (Mobile customization) */
+@media (max-width: 420px) {
+  .search-bar {
+    width: 100%;
+    margin-top: 8px;
+  }
+.page-container{
+  width: 160vw;
+  height:150vh;
+}
+  .header {
+    align-items: flex-start;
+  }
+
+  .header h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .parking-table {
+    font-size: 12px;
+    overflow-x: auto;
+  }
+
+  .parking-table th,
+  .parking-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 12px;
+    padding: 8px;
+    margin-top: 5px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,240 @@
+/* Background and container styling */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #5c6bc0, #ffffff);
+  }
+  .role-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    mix-blend-mode: multiply;
+  }
+  
+  .role-image img {
+    max-width: 100%;
+    height: 480px;
+  }
+  
+  /* Container */
+  .parking-register-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+    /* Background Image */
+    background-image: url('park.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+  .parking-register-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* dark overlay */
+    z-index: 1;
+  }
+  
+  .parking-register-form {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+
+.parking-register-form:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+.parking-register-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Input field wrapper */
+.parking-register-input-field {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.parking-register-input-field label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.parking-register-input-field .asterik {
+  color: red;
+  margin-left: 4px;
+}
+
+/* Inputs */
+.parking-register-input-field input,
+.parking-register-input-field textarea {
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.parking-register-input-field input:focus,
+.parking-register-input-field textarea:focus {
+  border-color: #4caf50;
+}
+
+/* Textarea resizing */
+.parking-register-input-field textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Error messages */
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* File Upload */
+.parking-register-input-field input[type="file"] {
+  padding: 6px;
+  border: none;
+}
+
+/* Submit Button */
+.parking-register-submit-btn {
+  width: 100%;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.parking-register-submit-btn:hover {
+  background-color: #43a047;
+}
+
+  
+  .login-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+  }
+  .login5-form2 {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #5c6bc0;
+  }
+  
+  .input-field {
+    margin-bottom: 15px;
+  }
+  
+  .input-field label {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .input-field input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+  .input-field select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+  .input-field textarea{
+    width: 100%;
+    height: 100px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+  .submit1-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit1-btn:hover {
+    background-color: #3e4a8c;
+  }
+  
+  /* Error messages */
+  .error-text {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+.asterik{
+    color: red;
+}  
+
+
+
+
