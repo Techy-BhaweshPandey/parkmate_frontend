@@ -71,19 +71,18 @@ const[Parkingname,setname]=useState('')
            <Link to={`/ProfilePage/${message6}`}title="Click to view profile">Welcome {message}</Link> 
            
           {messageimg ? (
-           <img
-  src={`https://parkmate-back-3.onrender.com${messageimg}`}
-  alt="Profile"
-  className="profile-img"
-  onError={(e) => {
-    e.target.onerror = null;
-    e.target.style.display = "none";
-    const icon = document.createElement("span");
-    icon.className = "fallback-icon";
-    e.target.parentNode.appendChild(icon);
-  }}
-/>
-
+            <img
+              src={messageimg}
+              alt="Profile"
+              className="profile-img"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.style.display = "none";
+                const icon = document.createElement("span");
+                icon.className = "fallback-icon";
+                e.target.parentNode.appendChild(icon);
+              }}
+            />
           ) : (
             <MdOutlineAccountCircle className="profile-img" />
           )}

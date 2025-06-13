@@ -114,8 +114,7 @@ const BookParking = () => {
         )}
         {currentSpots.map(spot => (
           <div key={spot._id} className="parking-spot">
-           <img src={`https://parkmate-back-3.onrender.com${spot.file}`} alt={`Img of ${spot.ParkingName}`} />
-
+            <img src={spot.file} alt={`Img of ${spot.ParkingName}`} />
             <div className="spot-info">
               <h2>{spot.ParkingName}</h2>
               <h3>Parking Area: {spot.ParkingArea}</h3>

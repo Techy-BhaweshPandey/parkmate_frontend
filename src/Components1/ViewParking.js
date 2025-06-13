@@ -101,8 +101,7 @@ const ViewParking = () => {
           return (
             <div className="item10" key={item._id}>
               <div className="item-image">
-<img src={`https://parkmate-back-3.onrender.com${item.file}`} alt="Parking" />
-
+                <img src={item.file} alt="Parking" />
               </div>
 
               <div className="item-details">
